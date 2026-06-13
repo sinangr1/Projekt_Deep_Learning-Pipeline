@@ -1,0 +1,127 @@
+{
+  "class_names": [
+    "no_zebra",
+    "zebra"
+  ],
+  "img_size": [
+    160,
+    160
+  ],
+  "batch_size": 32,
+  "baseline_epochs": 20,
+  "optimized_epochs": 40,
+  "class_distribution": {
+    "training_class_counts": {
+      "no_zebra": 5405,
+      "zebra": 1059
+    },
+    "validation_class_counts": {
+      "no_zebra": 1158,
+      "zebra": 226
+    },
+    "test_class_counts": {
+      "no_zebra": 1159,
+      "zebra": 228
+    },
+    "training_imbalance_ratio": 5.103871576959396,
+    "validation_imbalance_ratio": 5.123893805309734,
+    "test_imbalance_ratio": 5.083333333333333
+  },
+  "baseline_validation_results": {
+    "accuracy": 0.865606963634491,
+    "loss": 0.28670382499694824,
+    "precision": 0.8703703880310059,
+    "recall": 0.20796459913253784
+  },
+  "baseline_test_results": {
+    "accuracy": 0.8658975958824158,
+    "loss": 0.30284202098846436,
+    "precision": 0.875,
+    "recall": 0.2149122804403305
+  },
+  "baseline_history_analysis": {
+    "final_training_accuracy": 0.8705136179924011,
+    "final_validation_accuracy": 0.865606963634491,
+    "final_training_loss": 0.2983367443084717,
+    "final_validation_loss": 0.3226330578327179,
+    "best_validation_loss": 0.28670382499694824,
+    "best_validation_loss_epoch": 19,
+    "accuracy_gap": 0.004906654357910156,
+    "loss_gap": 0.024296313524246216
+  },
+  "optimization_decision": {
+    "optimization_needed": true,
+    "optimization_reasons": [
+      "The final validation loss is significantly higher than the best validation loss. The model may have become worse in later epochs.",
+      "The training dataset has class imbalance. The model may become biased toward the majority class."
+    ],
+    "recommended_actions": [
+      "Use EarlyStopping, reduce patience, or lower the learning rate.",
+      "Use class weights or add more images for the minority class."
+    ],
+    "target_validation_accuracy": 0.85
+  },
+  "optimized_validation_results": {
+    "accuracy": 0.9783236980438232,
+    "loss": 0.08655077964067459,
+    "precision": 0.9711538553237915,
+    "recall": 0.8938053250312805
+  },
+  "optimized_test_results": {
+    "accuracy": 0.9711607694625854,
+    "loss": 0.09973645210266113,
+    "precision": 0.9747474789619446,
+    "recall": 0.8464912176132202
+  },
+  "f1_scores": {
+    "baseline_validation_f1": 0.33571428359163047,
+    "optimized_validation_f1": 0.9308755885453737,
+    "optimized_test_f1": 0.9061032822150555
+  },
+  "exports": {
+    "baseline_model": "C:\\Users\\sozde\\Desktop\\Deep Learning\\6. Woche Projekt\\Projekt_Deep_Learning-Pipeline\\models\\baseline_cnn.keras",
+    "optimized_model": "C:\\Users\\sozde\\Desktop\\Deep Learning\\6. Woche Projekt\\Projekt_Deep_Learning-Pipeline\\models\\optimized_cnn.keras",
+    "baseline_plots": {
+      "accuracy_plot": "C:\\Users\\sozde\\Desktop\\Deep Learning\\6. Woche Projekt\\Projekt_Deep_Learning-Pipeline\\outputs\\baseline_accuracy.png",
+      "loss_plot": "C:\\Users\\sozde\\Desktop\\Deep Learning\\6. Woche Projekt\\Projekt_Deep_Learning-Pipeline\\outputs\\baseline_loss.png"
+    },
+    "optimized_plots": {
+      "accuracy_plot": "C:\\Users\\sozde\\Desktop\\Deep Learning\\6. Woche Projekt\\Projekt_Deep_Learning-Pipeline\\outputs\\optimized_accuracy.png",
+      "loss_plot": "C:\\Users\\sozde\\Desktop\\Deep Learning\\6. Woche Projekt\\Projekt_Deep_Learning-Pipeline\\outputs\\optimized_loss.png"
+    },
+    "baseline_confusion_matrix": "C:\\Users\\sozde\\Desktop\\Deep Learning\\6. Woche Projekt\\Projekt_Deep_Learning-Pipeline\\outputs\\confusion_matrix_baseline_test.png",
+    "optimized_confusion_matrix": "C:\\Users\\sozde\\Desktop\\Deep Learning\\6. Woche Projekt\\Projekt_Deep_Learning-Pipeline\\outputs\\confusion_matrix_optimized_test.png"
+  },
+  "confusion_matrices": {
+    "baseline": {
+      "confusion_matrix": [
+        [
+          1152,
+          7
+        ],
+        [
+          179,
+          49
+        ]
+      ],
+      "classification_report": "              precision    recall  f1-score   support\n\n    no_zebra     0.8655    0.9940    0.9253      1159\n       zebra     0.8750    0.2149    0.3451       228\n\n    accuracy                         0.8659      1387\n   macro avg     0.8703    0.6044    0.6352      1387\nweighted avg     0.8671    0.8659    0.8299      1387\n",
+      "zebra_f1_score": 0.34507042253521125,
+      "output_path": "C:\\Users\\sozde\\Desktop\\Deep Learning\\6. Woche Projekt\\Projekt_Deep_Learning-Pipeline\\outputs\\confusion_matrix_baseline_test.png"
+    },
+    "optimized": {
+      "confusion_matrix": [
+        [
+          1154,
+          5
+        ],
+        [
+          35,
+          193
+        ]
+      ],
+      "classification_report": "              precision    recall  f1-score   support\n\n    no_zebra     0.9706    0.9957    0.9830      1159\n       zebra     0.9747    0.8465    0.9061       228\n\n    accuracy                         0.9712      1387\n   macro avg     0.9727    0.9211    0.9445      1387\nweighted avg     0.9713    0.9712    0.9703      1387\n",
+      "zebra_f1_score": 0.9061032863849765,
+      "output_path": "C:\\Users\\sozde\\Desktop\\Deep Learning\\6. Woche Projekt\\Projekt_Deep_Learning-Pipeline\\outputs\\confusion_matrix_optimized_test.png"
+    }
+  }
+}
