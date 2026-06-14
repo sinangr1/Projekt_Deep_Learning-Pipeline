@@ -51,7 +51,7 @@ Das Modell unterscheidet zwischen zwei Klassen:
 
 Die Bilder werden mit einer Bildgrösse von 160 x 160 verarbeitet. Die Batch Size beträgt 32.
 
-## Datensatzverteilung
+Datensatzverteilung
 
 Die Klassenverteilung zeigt, dass der Datensatz unausgeglichen ist. Die Klasse no_zebra kommt deutlich häufiger vor als die Klasse zebra.
 
