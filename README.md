@@ -1,5 +1,5 @@
-Zebra Classification with Convolutional Neural Networks
-Projektübersicht
+# Zebra Classification with Convolutional Neural Networks
+## Projektübersicht
 
 In diesem Projekt wird ein Convolutional Neural Network (CNN) zur binären Bildklassifikation entwickelt. 
 Ziel des Modells ist es, Bilder in zwei Klassen zu unterscheiden:
@@ -21,8 +21,8 @@ Vergleich zwischen Baseline-Modell und optimiertem Modell
 Analyse der Modellleistung mit Accuracy, Loss, Precision, Recall und F1-Score
 Auswertung der Confusion Matrix
 Speicherung der Resultate als Grafiken und JSON-Datei
-Projektstruktur
-Projekt_Deep_Learning-Pipeline/
+## Projektstruktur
+```Projekt_Deep_Learning-Pipeline/
 │
 ├── 00_run_pipeline.py
 ├── 01_ordered_zebra_pipeline.py
@@ -39,6 +39,7 @@ Projekt_Deep_Learning-Pipeline/
 │   ├── confusion_matrix_baseline_test.png
 │   ├── confusion_matrix_optimized_test.png
 │   └── zebra_cnn_summary.json
+```
 Verwendete Klassen
 
 Das Modell unterscheidet zwischen zwei Klassen:
@@ -50,7 +51,7 @@ Das Modell unterscheidet zwischen zwei Klassen:
 
 Die Bilder werden mit einer Bildgrösse von 160 x 160 verarbeitet. Die Batch Size beträgt 32.
 
-Datensatzverteilung
+##Datensatzverteilung
 
 Die Klassenverteilung zeigt, dass der Datensatz unausgeglichen ist. Die Klasse no_zebra kommt deutlich häufiger vor als die Klasse zebra.
 
@@ -144,7 +145,7 @@ Das optimierte Modell ist dem Baseline-Modell klar überlegen. Besonders die Erk
 Gespeicherte Ergebnisse
 
 Die wichtigsten Ergebnisse werden im Ordner outputs gespeichert:
-
+```
 outputs/
 ├── baseline_accuracy.png
 ├── baseline_loss.png
@@ -153,7 +154,7 @@ outputs/
 ├── confusion_matrix_baseline_test.png
 ├── confusion_matrix_optimized_test.png
 └── zebra_cnn_summary.json
-
+```
 Die Datei zebra_cnn_summary.json enthält die wichtigsten Resultate des Projekts in strukturierter Form, darunter:
 
 Klassennamen
