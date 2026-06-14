@@ -172,7 +172,7 @@ Das Projekt kann über die Datei 00_run_pipeline.py gestartet werden:
 
 python 00_run_pipeline.py
 
-Diese Datei lädt die Hauptpipeline und führt den Trainings-, Evaluations- und Exportprozess aus.
+Diese Datei lädt die Hauptpipeline und führt den Trainings, Evaluations und Exportprozess aus.
 
 Ergebnisbewertung
 
